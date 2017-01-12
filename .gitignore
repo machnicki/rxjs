@@ -1,0 +1,10 @@
+## Directory-based project format:
+.idea/
+
+
+### Logs
+*.log
+
+# npm modules
+node_modules
+/dist
