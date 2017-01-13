@@ -1,6 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
 
+import Samples from 'samples/samples.jsx'
+
 render((
-  <div>Lorem ipsum dolor</div>
+  <Samples />
 ), document.getElementById('app'))
