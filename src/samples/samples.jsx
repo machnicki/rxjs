@@ -2,6 +2,9 @@ import React from 'react'
 import Http from 'my-http'
 import Rx from 'rxjs'
 
+import { add } from 'modules/cars/actions'
+import state$ from 'modules/cars/repository'
+
 export default function Samples() {
   const cars$ = Rx.Observable
     .fromPromise(Http({ name: 'cars' }).get())
@@ -22,6 +25,8 @@ export default function Samples() {
       er => console.error(err),
       () => console.log('done!')
     )
+
+  state$.subscribe(data => console.log('current state', data))
 
   return (<div>
     This is my sample
