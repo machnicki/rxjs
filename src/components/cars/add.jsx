@@ -1,12 +1,14 @@
+// @flow
+
 import React, { Component } from 'react'
-import { add } from 'modules/cars/actions'
+import { add } from '../../modules/cars/actions'
 
 const INITIAL_VALUE = ''
 
 export default class AddCar extends Component {
   state = { value: INITIAL_VALUE }
 
-  handleChange = event => {
+  handleChange = (event: Object) => {
     this.setState({ value: event.currentTarget.value })
   }
 
