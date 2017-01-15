@@ -28,6 +28,10 @@ export default function Samples() {
 
   state$.subscribe(data => console.log('current state', data))
 
+  setTimeout(() => {
+    add('test')
+  }, 2000)
+
   return (<div>
     This is my sample
   </div>)
